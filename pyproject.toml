@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "waflens"
+version = "0.1.0"
+description = "Summarize ModSecurity / Coraza JSON audit logs and flag likely false positives"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "Harjeet J L" }]
+keywords = ["waf", "modsecurity", "coraza", "owasp-crs", "security", "devsecops"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: System :: Logging",
+  "Environment :: Console",
+]
+
+[project.scripts]
+waflens = "waflens.cli:main"
+
+[tool.setuptools]
+packages = ["waflens"]
